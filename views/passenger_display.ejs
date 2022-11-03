@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>After INSERTION IN Passenger COLLECTION</h1>
+    <h1>Place Inserted</h1>
+    <% for(var i=0; i < data.length; i++) { %>
+          <p><%= data[i].id %></p>
+          <p><%= data[i].name %></p>
+          <p><%= data[i].age %></p>
+          <p><%= data[i].gender %></p>
+          <p><%= data[i].purpose %></p>
+          <p><%= data[i].mobile_no %></p>
+          <p><%= data[i].email %></p>
+          <p><%= data[i].address.doorno %></p>
+          <p><%= data[i].address.steet_name %></p>
+          <p><%= data[i].address.city%></p>
+          <p><%= data[i].address.state %></p>
+          <p><%= data[i].address.pincode %></p>
+     <% } %>
+      
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>INSERTION IN SCHEDULE COLLECTION</h1>
+    <form action="/create/schedule_collection" method="post">
+        <label class="form-label">Enter the Date: 
+            <input type="date" name="date">
+        </label><br><br>
+        <label class="form-label" >Enter the Route ID: </label>
+        <select name="routeid" id="plactype">
+            <% for(var i=0; i < data.length; i++) { %>
+                <option value="<%= data[i].route_id %>"><%= data[i].route_id %></option>
+           <% } %>
+        </select>
+        <label class="form-label">Enter the Company ID: 
+            <select name="companyid" id="plactype">
+                <% for(var i=0; i < data1.length; i++) { %>
+                    <option value="<%= data1[i].company_id %>"><%= data1[i].company_name %></option>
+               <% } %>
+            </select>
+        </label><br>
+        <br>      
+        <label class="form-label">BusID: 
+                <% for(var i=0; i < data2.length; i++) { %>
+                    <select name="busid" id="plactype">
+                        <% for(var i=0; i < data2.length; i++) { %>
+                            <option value="<%= data2[i].bus_id %>"><%= data2[i].bus_id %></option>
+                       <% } %>
+                    </select>
+               <% } %>
+         </label><br>
+         <br>
+         <label class="form-label">Driver ID: 
+                <% for(var i=0; i < data3.length; i++) { %>
+                    <select name="driverid" id="plactype">
+                        <% for(var i=0; i < data3.length; i++) { %>
+                            <option value="<%= data3[i].driver_id %>"><%= data3[i].driver_id %></option>
+                       <% } %>
+                    </select>
+               <% } %>
+         </label><br>
+         <br>
+         <label class="form-label">Expected Arrival Time: 
+                <input type="datetime-local" name="e_arrivaltime" >
+     </label><br>
+     <br>
+     <label class="form-label">Expected Departure Time: 
+        <input type="datetime-local" name="e_departuretime">
+     </label>
+      <br>
+      <br>
+      <label class="form-label">Enter the bus fare</label>
+      <input type="number" name="fare"><br>
+      <label class="form-label">Enter the Type of place the route in:</label>
+      <select name="placetype" id="plactype">
+            <option value="Hills">Hills</option>
+            <option value="Plateau">Plateau</option>
+            <option value="Plain">Plain</option>
+    </select>
+        <input type="submit" class="button-64">
+    </form>
+</body>
+</html>

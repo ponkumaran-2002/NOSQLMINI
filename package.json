@@ -1,0 +1,24 @@
+{
+  "name": "ticket_reservation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.6.5",
+    "path": "^0.12.7",
+    "random-string-alphanumeric-generator": "^0.12.2",
+    "url": "^0.11.0"
+  }
+}

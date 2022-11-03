@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="driver_details.css">
+</head>
+<body>
+    <h1>INSERTION IN DRIVER COLLECTION</h1>
+    <form action="/create/driver_collection" method="post">
+        <label class="form-label">Enter the Driver Name: 
+           <input type="text" name="name">
+        </label><br><br>
+        <label class="form-label">Enter the Driver Age: 
+            <input type="number" name="age" min="1" max="104">
+         </label><br>
+         <br>
+         <label class="form-label">Enter the Driver Gender: 
+            <input type="radio" name="gender" id="male" value="Male"><label for="" class="form-label">Male</label>
+            <input type="radio" name="gender" id="female" value="Female"><label for="" class="form-label">Female</label>
+         </label><br>
+         <br>
+         <label class="form-label">Enter the LicenseNO: 
+        <input type="text" name="licenseno">
+         </label><br>
+         <br>
+         <label class="form-label">Enter the Mobile No:
+        <input type="tel" name="phone_num" id="phone_num" pattern="[\+]\d{2}-[6-9]{1}[0-9]{9}">
+         </label>
+         <br>
+         <br>
+         <label class="form-label">Enter the Email:
+            <input type="email" name="email" id="email">
+        </label>
+        <label class="form-label">Enter the Driver Experience: 
+            <input type="Number" name="experience" min="1" max="104">
+         </label><br>
+         <br>
+        <label class="form-label"><h2>Address</h2>
+            <label class="form-label">Door NO:
+            <input type="text" name="doorno" id="doorno">
+            </label>
+            <br>
+            <br>
+            <label class="form-label">Street Name:
+                <input type="text" name="street_name" id="street_name">
+            </label>
+            <br>
+            <br>
+            <label class="form-label">City:
+                <input type="text" name="city" id="city">
+            </label>
+            <br>
+            <br>
+            <label class="form-label">State:
+                <input type="text" name="state" id="state">
+            </label> 
+            <br>
+            <br>
+            <label class="form-label">Pincode:
+                <input type="text" name="pincode" id="pincode">
+            </label> 
+            <br>
+                
+        </label>
+        <br>
+      <input type="submit" class="button-64">
+    </form>
+</body>
+</html>

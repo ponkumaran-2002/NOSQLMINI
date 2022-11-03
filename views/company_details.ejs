@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>INSERTION IN COMPANY COLLECTION</h1>
+    <form action="/create/company_collection" method="post">
+        <label class="form-label">Enter the Company Name: 
+            <input type="text" name="name" id="plactype">
+        </label><br><br>
+        <label class="form-label">Company Started: 
+            <input type="date" name="company_started">
+        </label><br>
+        <br>      
+        <label class="form-label">Buses Under the Company: 
+                <% for(var i=0; i < data.length; i++) { %>
+                    <input type="checkbox" name="busid" value="<%= data[i].bus_id %>"><label><%= data[i].bus_id %></label><br>
+               <% } %>
+         </label><br>
+         <br>
+         <label class="form-label">Drivers Under the Company: 
+            <% for(var i=0; i < data2.length; i++) { %>
+                <input type="checkbox" name="driverid" value="<%= data2[i].driver_id %>"><label><%= data2[i].driver_id %></label><br>
+           <% } %>
+     </label><br>
+     <br>
+     <label class="form-label">Routes Under the Company: 
+        <% for(var i=0; i < data3.length; i++) { %>
+            <input type="checkbox" name="routeid" value="<%= data3[i].route_id %>"><label><%= data3[i].route_id %></label><br>
+       <% } %>
+ </label><br>
+ <br>
+ <label class="form-label">Company Office Place: 
+    <% for(var i=0; i < data4.length; i++) { %>
+        <input type="checkbox" name="placeid" value="<%= data4[i].place_id %>"><label><%= data4[i].place_id %></label><br>
+   <% } %>
+</label><br>
+<br>
+      <input type="submit" class="button-64">
+    </form>
+</body>
+</html>

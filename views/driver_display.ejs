@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>After INSERTION IN Driver COLLECTION</h1>
+    <h1>Place Inserted</h1>
+    <% for(var i=0; i < data.length; i++) { %>
+          <p><%= data[i].driver_id %></p>
+          <p><%= data[i].driver_name %></p>
+          <p><%= data[i].driver_age %></p>
+          <p><%= data[i].driver_gender %></p>
+          <p><%= data[i].driver_licenseno %></p>
+          <p><%= data[i].driver_experience %></p>
+          <p><%= data[i].driver_mobile_no %></p>
+          <p><%= data[i].driver_email %></p>
+          <p><%= data[i].driver_address.doorno %></p>
+          <p><%= data[i].driver_address.steet_name %></p>
+          <p><%= data[i].driver_address.city%></p>
+          <p><%= data[i].driver_address.state %></p>
+          <p><%= data[i].driver_address.pincode %></p>
+     <% } %>
+      
+</body>
+</html>

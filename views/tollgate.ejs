@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>INSERTION IN TOLL GATE COLLECTION</h1>
+    <h1>Toll Gate Price</h1>
+    <form action="/create/tollgate_collection" method="post">
+        <label class="form-label">Enter the Toll Gate Price for LMV: 
+           <input type="number" name="lmv">
+        </label><br><br>
+        <label class="form-label">Enter the Toll Gate Price for Truck: 
+            <input type="number" name="truck">
+        </label><br>
+        <br>      
+        <label class="form-label">Enter the Place Type: 
+            <select name="place_type" id="plactype">
+                <% for(var i=0; i < data.length; i++) { %>
+                    <option value="<%= data[i].place_id %>"><%= data[i].place_name %></option>
+               <% } %>
+            </select>
+         </label><br>
+         <br>
+      <input type="submit" class="button-64">
+    </form>
+</body>
+</html>

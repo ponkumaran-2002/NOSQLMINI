@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="driver_details.css"> 
+</head>
+<body>
+    <h1>Drivers with more experience in HILLS</h1>
+    <% if(data.length>0) { %>
+        <% for(var i=0; i < data.length; i++) { %>
+            <p>Driver ID: <%= data[i]._id %>&emsp; Number of Times he drove in Hills: <%= data[i].count %></p>
+       <% } %>
+    <% } else{ %>
+        <p>No such an experienced driver</p>
+    <% } %>
+    
+
+</body>
+</html>

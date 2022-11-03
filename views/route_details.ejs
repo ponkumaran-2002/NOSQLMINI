@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>INSERTION IN ROUTE COLLECTION</h1>
+    <form action="/create/route_collection" method="post">
+        <label class="form-label">Enter the From: 
+            <select name="from" id="plactype">
+                <% for(var i=0; i < data.length; i++) { %>
+                    <option value="<%= data[i].place_id %>"><%= data[i].place_name %></option>
+               <% } %>
+            </select>
+        </label><br><br>
+        <label class="form-label">Enter the Destination: 
+            <select name="destination" id="plactype">
+                <% for(var i=0; i < data.length; i++) { %>
+                    <option value="<%= data[i].place_id %>"><%= data[i].place_name %></option>
+               <% } %>
+            </select>
+        </label><br>
+        <br>      
+        <label class="form-label">VIA: 
+                <% for(var i=0; i < data.length; i++) { %>
+                    <input type="checkbox" name="via" value="<%= data[i].place_id %>"><label><%= data[i].place_name %></label>
+               <% } %>
+         </label><br>
+         <br>
+         <label class="form-label">Tollgate: 
+            <% for(var i=0; i < data2.length; i++) { %>
+                <input type="checkbox" name="tollgate" value="<%= data2[i].tollgate_id %>"><label><%= data2[i].Tolldetails.place_name %></label>
+           <% } %>
+     </label><br>
+     <br>
+     <label class="form-label">Enter the Total Time: 
+        <input type="number" name="time">
+     </label>
+      <br>
+      <br>
+      <label class="form-label">Enter the Total KM: 
+        <input type="number" name="km">
+     </label>
+      <br>
+      <br>  
+      <!-- <label class="form-label">Enter the Total Fare: 
+        <input type="number" name="fare">
+     </label>
+      <br> -->
+      <br>         
+        <input type="submit" class="button-64">
+    </form>
+</body>
+</html>

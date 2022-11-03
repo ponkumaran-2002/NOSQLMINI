@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="place.css">
+</head>
+<body>
+
+    <h1>INSERTION IN REPORT COLLECTION</h1>
+    <form action="/create/report_collection" method="post">
+        <label class="form-label">Enter the Place ID: 
+                <select name="placeid" id="plactype">
+                    <% for(var i=0; i < data.length; i++) { %>
+                        <option value="<%= data[i].place_id %>"><%= data[i].place_id %></option>
+                   <% } %>
+                </select>
+        </label><br><br>
+        <label class="form-label">Enter the Schedule ID: 
+                <select name="scheduleid" id="plactype">
+                    <% for(var i=0; i < data1.length; i++) { %>
+                        <option value="<%= data1[i].schedule_id %>"><%= data1[i].schedule_id %></option>
+                   <% } %>
+                </select>
+        </label><br><br>
+        <label class="form-label">Enter the Bus ID: 
+            <select name="busid" id="plactype">
+                <% for(var i=0; i < data2.length; i++) { %>
+                    <option value="<%= data2[i].bus_id %>"><%= data2[i].bus_id %></option>
+               <% } %>
+            </select>
+    </label><br><br>
+      <input type="submit" class="button-64">
+    </form>
+
+</body>
+</html>

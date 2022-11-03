@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tollgate.css"> 
+</head>
+<body>
+    <h1>INSERTION IN TICKET COLLECTION</h1>
+    <form action="/create/ticket_collection" method="post">
+        <label class="form-label">Enter the SCHEDULEID: 
+            <select name="schid" id="plactype">
+                <% for(var i=0; i < data.length; i++) { %>
+                    <option value="<%= data[i].schedule_id %>"><%= data[i].schedule_id %></option>
+               <% } %>
+            </select>    
+        </label><br><br>
+        <label class="form-label">Select Passengers: 
+                <% for(var i=0; i < data1.length; i++) { %>
+                    <input type="checkbox" name="passenger" value="<%= data1[i].id %>"><label><%= data1[i].id %></label><br>
+               <% } %>
+         </label><br>
+         <br>
+         <label class="form-label">Enter the Payment Id: 
+          <input type="Text" name="paymentid">
+     </label><br>
+     <br>
+     <label class="form-label">Is Canceled: 
+        <input type="radio" name="cancelled" value="Yes"/><label>Yes</label>
+        <input type="radio" name="cancelled" value="No"/><label>No</label>
+     </label>
+      <br>
+      <br>         
+        <input type="submit" class="button-64">
+    </form>
+</body>
+</html>

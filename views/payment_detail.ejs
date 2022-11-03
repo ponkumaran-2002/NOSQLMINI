@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="passenger_details.css">
+</head>
+<body>
+    <h1>INSERTION IN PAYMENT COLLECTION</h1>
+    <form action="/create/payment_collection" method="post">
+        <label class="form-label">Enter the Sender Account NO:: 
+            <input type="number" name="accountno">
+         </label><br>
+         <br>
+         <label class="form-label">Enter the Payment Mode: 
+            <input type="radio" name="mode" id="online" value="Online"><label for="" class="form-label">Online</label>
+            <input type="radio" name="mode" id="offline" value="Offline"><label for="" class="form-label">Offline</label>
+         </label><br>
+         <br>
+         <label class="form-label">Enter the Amount:
+        <input type="number" name="amount">
+         </label>
+         <br>
+         <br>
+          <input type="submit" class="button-64">
+    </form>
+
+</body>
+</html>
